@@ -2,7 +2,7 @@ import React from "react";
 
 function Header({ loggedIn, LogoutFunction }) {
   return (
-    <div>
+    <div className="Header">
       <header>
         <nav>
           {loggedIn ? (
