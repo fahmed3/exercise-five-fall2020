@@ -5,10 +5,17 @@ function Header({ loggedIn, LogoutFunction }) {
     <div>
       <header>
         <nav>
-          <a href="/">User Profile</a>
-          <a href="/login">Login</a>
-          <a href="/logout">Log out</a>
-          <a href="/create-account">Create Account</a>
+          {loggedIn ? (
+            <>
+              <a href="/">User Profile</a>
+              <a onClick={() => LogoutFunction()}>Logout</a>
+            </>
+          ) : (
+            <>
+              <a href="/login">Login</a>
+              <a href="/create-account">Create Account</a>
+            </>
+          )}
         </nav>
       </header>
     </div>
